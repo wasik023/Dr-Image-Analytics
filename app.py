@@ -1,7 +1,8 @@
 import streamlit as st
 from pathlib import Path
 import google.generativeai as genai
-from api_key import api_key  # Ensure api_key.py contains the correct API key
+# Fetch API key from Streamlit secrets
+api_key = st.secrets["api_key"]
 
 # Configure genai with API key
 genai.configure(api_key=api_key)
